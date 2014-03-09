@@ -1,18 +1,18 @@
 'use strict';
 
-angular.module('angularNewsApp', [
+var app = angular.module('angularNewsApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute'
-])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+]);
+app.config(function ($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/posts.html',
+      controller: 'PostsCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+});
