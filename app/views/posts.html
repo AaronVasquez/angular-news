@@ -1,6 +1,6 @@
-<div ng-repeat="post in posts">
+<div ng-repeat="(postId, post) in posts">
   <a href="{{ post.url }}">{{ post.title }}</a>
-  <button class="btn btn-danger" ng-click="deletePost($index)">delete</button>  
+  <button class="btn btn-danger" ng-click="deletePost(postId)">delete</button>  
 </div>
 
 <form ng-submit="submitPost()">
