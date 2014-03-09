@@ -5,6 +5,7 @@ angular.module('angularNewsApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
+      'Potato'
     ];
   });
