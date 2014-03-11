@@ -4,8 +4,10 @@ var app = angular.module('angularNewsApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'firebase'
 ]);
+app.constant('FIREBASE_URL', 'https://amber-fire-7442.firebaseio.com/');
 app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
