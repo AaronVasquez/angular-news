@@ -1,5 +1,6 @@
 <div ng-repeat="(postId, post) in posts">
   <a href="{{ post.url }}">{{ post.title }}</a>
+  <a href="#/posts/{{ postId }}">comments</a>
   <button class="btn btn-danger" ng-click="deletePost(postId)">delete</button>  
 </div>
 
