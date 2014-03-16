@@ -3,11 +3,11 @@
   <a href="#/posts/{{ postId }}">comments</a>
   <button class="btn btn-danger" ng-click="deletePost(postId)">delete</button>  
 </div>
-
+<br>
 <form ng-submit="submitPost()">
-  <input type="text" ng-model="post.title" />
-  <input type="text" ng-model="post.url" />
-  <input type="submit" value="Add Post" />
+  <input type="text" class="form-control" ng-model="post.title" /> <br>
+  <input type="text" class="form-control" ng-model="post.url" /> <br>
+  <input type="submit" class="btn btn-primary" value="Add Post" />
 </form>
 Posts: {{ posts }} <br>
 Post: {{ post }}
