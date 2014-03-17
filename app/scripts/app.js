@@ -7,7 +7,9 @@ var app = angular.module('angularNewsApp', [
   'ngRoute',
   'firebase'
 ]);
+
 app.constant('FIREBASE_URL', 'https://amber-fire-7442.firebaseio.com/');
+
 app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
@@ -17,6 +19,14 @@ app.config(function ($routeProvider) {
     .when('/posts/:postId', {
       templateUrl: 'views/showpost.html',
       controller: 'PostViewCtrl'
+    })
+    .when('/register', {
+      templateUrl: 'views/register.html',
+      controller: 'AuthCtrl'
+    })
+    .when('/login', {
+      templateUrl: 'views/login.html',
+      controller: 'AuthCtrl'
     })
     .otherwise({
       redirectTo: '/'
